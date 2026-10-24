@@ -1,0 +1,38 @@
+name: Spec gap
+description: A normative rule from the standard that a spec does not model, or models wrongly
+labels: ["kind:rfc-gap"]
+body:
+  - type: input
+    id: spec
+    attributes:
+      label: Spec package
+      placeholder: rfc9293_tcp
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: Standard and section
+      placeholder: RFC 9293 §3.10.3
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Normative text
+      description: Quote the MUST / SHOULD / MAY text.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What the spec does now
+      description: File and contract, and how it differs from the standard.
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: Assertion that would catch it
+      description: Inputs and expected outputs for a regression test.
